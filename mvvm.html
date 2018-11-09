@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVVM</title>
+</head>
+<body>
+<div id="mvvm-app">
+    <input type="text" v-model="child.someStr">
+    <p>{{child.someStr}}</p>
+</div>
+</body>
+<script src="./js/observer.js"></script>
+<script src="./js/watcher.js"></script>
+<script src="./js/compile.js"></script>
+<script src="./js/mvvm.js"></script>
+<script>
+    var vm = new MVVM({
+        el: '#mvvm-app',
+        data: {        
+            child: {
+                someStr: 'Hello Kaixuan!'
+            }
+        }
+    });
+</script>
+</html>
